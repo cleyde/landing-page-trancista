@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trancista - Agende Sua Transformação</title>
+    <!-- Inclui o Tailwind CSS para estilização rápida e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configurações personalizadas do Tailwind CSS para adicionar as cores do cliente -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'braid-green': '#677b4b',
+                        // Versão um pouco mais escura para o efeito hover
+                        'braid-green-dark': '#5a6b42', 
+                        // Cor de fundo do cliente, semelhante a "Mocha Mousse"
+                        'mocha-mousse-bg': '#faf3dc', 
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Importa a fonte Inter do Google Fonts para uma tipografia moderna -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Importa a biblioteca Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-mocha-mousse-bg">
+
+    <!-- 1. Seção Principal (Hero) -->
+    <header class="relative h-[600px] md:h-[700px] flex items-center justify-center text-center overflow-hidden">
+        <!-- Imagem de fundo com sobreposição escura -->
+        <div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image: url('http://127.0.0.1:5500/images%20/imagem_cab.png');">
+            <div class="absolute inset-0 bg-stone-900 opacity-60"></div>
+        </div>
+        <!-- Conteúdo da seção principal -->
+        <div class="relative z-10 px-4 max-w-4xl text-white" style="margin-top: 400px;">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4">
+                Tranças Incríveis para Sua Próxima Transformação
+            </h1>
+            <p class="text-lg sm:text-xl font-light mb-8">
+                Especialista em box braids, nagô e twists. Use apenas produtos de alta qualidade para um resultado deslumbrante.
+            </p>
+            <a href="#agendamento" class="inline-block bg-braid-green hover:bg-braid-green-dark text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                Agende Seu Horário
+            </a>
+        </div>
+    </header>
+
+    <!-- 2. Sobre Você -->
+    <section id="sobre" class="py-16 md:py-24 px-4 bg-white">
+        <div class="container mx-auto max-w-5xl flex flex-col md:flex-row items-center gap-12">
+            <!-- Imagem da trancista -->
+            <div class="md:w-1/3 flex-shrink-0">
+                <img src="http://127.0.0.1:5500/images%20/trancista.jpg" alt="Foto da trancista" class="w-full h-auto object-cover rounded-lg shadow-xl">
+            </div>
+            <!-- Texto sobre a trancista -->
+            <div class="md:w-2/3 text-center md:text-left">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-braid-green">A Arte em Suas Mãos</h2>
+                <p class="text-stone-700 mb-4 leading-relaxed">
+                    Minha paixão por tranças começou como um hobby e rapidamente se tornou uma missão: ajudar as pessoas a se expressarem e se sentirem confiantes através da beleza dos cabelos. Cada trança que faço é uma obra de arte, criada com carinho e atenção aos detalhes.
+                </p>
+                <p class="text-stone-700 leading-relaxed">
+                    Acredito que as tranças não são apenas um penteado, mas uma forma de empoderamento e celebração da cultura. Estou aqui para oferecer um serviço de qualidade, uma experiência relaxante e um resultado que fará você se apaixonar pelo seu cabelo.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Serviços e Preços -->
+    <section id="servicos" class="py-16 md:py-24 px-4">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-braid-green">Nossos Serviços</h2>
+            <p class="text-lg text-stone-700 mb-12">Oferecemos uma variedade de estilos para atender a sua necessidade.</p>
+            <!-- Grid de serviços -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card de Serviço 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-4xl text-braid-green mb-4"><i class="fas fa-braid"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Box Braids</h3>
+                    <p class="text-stone-700 mb-4">Tranças soltas e protetoras que combinam estilo e durabilidade. Perfeito para qualquer ocasião.</p>
+                    <span class="text-lg font-bold text-stone-900">Preço a partir de R$ 150</span>
+                </div>
+                <!-- Card de Serviço 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-4xl text-braid-green mb-4"><i class="fas fa-feather"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Tranças Nagô</h3>
+                    <p class="text-stone-700 mb-4">Tranças rentes ao couro cabeludo que criam padrões geométricos e artísticos. Um estilo elegante e versátil.</p>
+                    <span class="text-lg font-bold text-stone-900">Preço a partir de R$ 80</span>
+                </div>
+                <!-- Card de Serviço 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-4xl text-braid-green mb-4"><i class="fas fa-infinity"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Twists</h3>
+                    <p class="text-stone-700 mb-4">Estilo de trança com torção, ideal para quem busca volume e definição. Fácil de manter e com um visual único.</p>
+                    <span class="text-lg font-bold text-stone-900">Preço a partir de R$ 120</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Galeria de Trabalhos (Portfólio) -->
+    <section id="portfolio" class="py-16 md:py-24 px-4 bg-white">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-braid-green">Galeria de Trabalhos</h2>
+            <p class="text-lg text-stone-700 mb-12">Veja a qualidade e o carinho em cada detalhe.</p>
+            <!-- Grid de imagens do portfólio -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('http://127.0.0.1:5500/images%20/box-braids.jpg');"></div>
+                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('http://127.0.0.1:5500/images%20/trancas-nago.avif');"></div>
+                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('http://127.0.0.1:5500/images%20/furlani.jpg');"></div>
+                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('http://127.0.0.1:5500/images%20/tranca_1.jpg');"></div>
+                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('http://127.0.0.1:5500/images%20/tranca_2.jpg');"></div>
+                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('http://127.0.0.1:5500/images%20/tranca_3.jpg');"></div>
+                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('http://127.0.0.1:5500/images%20/tranca_4.jpg');"></div>
+                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('http://127.0.0.1:5500/images%20/tranca_5.jpg');"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Depoimentos de Clientes -->
+    <section id="depoimentos" class="py-16 md:py-24 px-4">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-braid-green">O Que Dizem Nossos Clientes</h2>
+            <p class="text-lg text-stone-700 mb-12">A satisfação de quem já transformou o visual.</p>
+            <!-- Grid de depoimentos -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-stone-700 italic mb-4">"Um trabalho impecável! O cuidado e a atenção aos detalhes são impressionantes. Adorei o resultado e já quero agendar novamente."</p>
+                    <div class="flex items-center justify-center">
+                        <img src="http://127.0.0.1:5500/images%20/cliente-1.jpg" alt="Foto do Cliente 1" class="w-12 h-12 rounded-full mr-4">
+                        <span class="font-semibold text-stone-900">Ana S.</span>
+                    </div>
+                </div>
+                <!-- Depoimento 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-stone-700 italic mb-4">"Profissionalismo e talento definem o trabalho. Minhas tranças ficaram perfeitas e recebi elogios de todos. Recomendo de olhos fechados!"</p>
+                    <div class="flex items-center justify-center">
+                        <img src="http://127.0.0.1:5500/images%20/cliente-2.jpg" alt="Foto do Cliente 2" class="w-12 h-12 rounded-full mr-4">
+                        <span class="font-semibold text-stone-900">Maria L.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Perguntas Frequentes (FAQ) -->
+    <section id="faq" class="py-16 md:py-24 px-4 bg-white">
+        <div class="container mx-auto max-w-3xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-braid-green">Perguntas Frequentes</h2>
+            <p class="text-lg text-stone-700 mb-12">Respostas para as suas principais dúvidas.</p>
+            <!-- Acordeão de FAQ -->
+            <div class="space-y-4 text-left">
+                <!-- Pergunta 1 -->
+                <details class="bg-mocha-mousse-bg p-4 rounded-lg cursor-pointer transition duration-300 hover:bg-yellow-100">
+                    <summary class="font-semibold text-stone-900">Qual o tempo de duração das tranças?</summary>
+                    <p class="mt-2 text-stone-700">A duração das tranças varia de 1 a 3 meses, dependendo do tipo de trança e dos cuidados que você tiver.</p>
+                </details>
+                <!-- Pergunta 2 -->
+                <details class="bg-mocha-mousse-bg p-4 rounded-lg cursor-pointer transition duration-300 hover:bg-yellow-100">
+                    <summary class="font-semibold text-stone-900">Como devo cuidar das tranças?</summary>
+                    <p class="mt-2 text-stone-700">É recomendado lavar o couro cabeludo com shampoo diluído e usar um tônico capilar. Evite esfregar e durma com uma touca de cetim para manter o estilo.</p>
+                </details>
+                <!-- Pergunta 3 -->
+                <details class="bg-mocha-mousse-bg p-4 rounded-lg cursor-pointer transition duration-300 hover:bg-yellow-100">
+                    <summary class="font-semibold text-stone-900">Preciso levar o material?</summary>
+                    <p class="mt-2 text-stone-700">Não. O material já está incluso no valor do serviço. Você só precisa agendar e vir pronta para a transformação!</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Agendamento e Contato -->
+    <section id="agendamento" class="py-16 md:py-24 px-4">
+        <div class="container mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-braid-green">Agende Seu Horário</h2>
+            <p class="text-lg text-stone-700 mb-8">Preencha o formulário e entraremos em contato para confirmar seu agendamento.</p>
+            <!-- Formulário de contato -->
+            <form class="space-y-6 bg-white p-8 rounded-lg shadow-xl">
+                <div>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" class="w-full px-4 py-3 rounded-md border-stone-300 focus:border-braid-green focus:ring focus:ring-braid-green" required>
+                </div>
+                <div>
+                    <input type="email" id="email" name="email" placeholder="Seu e-mail" class="w-full px-4 py-3 rounded-md border-stone-300 focus:border-braid-green focus:ring focus:ring-braid-green" required>
+                </div>
+                <div>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Seu telefone" class="w-full px-4 py-3 rounded-md border-stone-300 focus:border-braid-green focus:ring focus:ring-braid-green" required>
+                </div>
+                <div>
+                    <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem ou tipo de trança de interesse" rows="4" class="w-full px-4 py-3 rounded-md border-stone-300 focus:border-braid-green focus:ring focus:ring-braid-green" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-braid-green hover:bg-braid-green-dark text-white font-semibold py-4 rounded-md transition duration-300 transform hover:scale-105 shadow-lg">
+                    Enviar
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 8. Rodapé (Footer) -->
+    <footer class="bg-stone-900 text-white py-12 px-4">
+        <div class="container mx-auto max-w-5xl text-center">
+            <!-- Ícones de redes sociais -->
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-stone-300 hover:text-white transition duration-300"><i class="fab fa-instagram text-2xl"></i></a>
+                <a href="#" class="text-stone-300 hover:text-white transition duration-300"><i class="fab fa-facebook-f text-2xl"></i></a>
+                <a href="#" class="text-stone-300 hover:text-white transition duration-300"><i class="fab fa-whatsapp text-2xl"></i></a>
+            </div>
+            <!-- Informações de contato -->
+            <div class="text-stone-400 text-sm mb-4">
+                <p>Telefone: (XX) XXXX-XXXX</p>
+                <p>E-mail: contato@seudominio.com</p>
+            </div>
+            <!-- Direitos Autorais -->
+            <p class="text-stone-500 text-xs">&copy; 2024 Sua Marca. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
