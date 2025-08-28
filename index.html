@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trancista - Agende Sua Transformação</title>
+    <title>Trancista 2 - Agende Sua Transformação</title>
     <!-- Inclui o Tailwind CSS para estilização rápida e responsiva -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Configurações personalizadas do Tailwind CSS para adicionar as cores do cliente -->
@@ -29,24 +29,68 @@
     <!-- Importa a biblioteca Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="carrossel-espaco.js" defer></script>
+    <script src="menu-mobile.js" defer></script>
 </head>
 <body class="bg-mocha-mousse-bg">
+    <!-- Menu de Navegação -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0 left-0">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-braid-green bg-white flex items-center justify-center">
+                    <img src="logo.jpg" alt="Logo Trancista" class="w-full h-full object-cover">
+                </div>
+                <span class="font-bold text-braid-green text-xl">Espaço Dandara</span>
+            </div>
+            <!-- Menu Desktop -->
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#hero" class="text-stone-700 hover:text-braid-green font-medium">Início</a></li>
+                <li><a href="#sobre" class="text-stone-700 hover:text-braid-green font-medium">Sobre</a></li>
+                <li><a href="#servicos" class="text-stone-700 hover:text-braid-green font-medium">Serviços</a></li>
+                <li><a href="#espaco" class="text-stone-700 hover:text-braid-green font-medium">Espaço</a></li>
+                <li><a href="#portfolio" class="text-stone-700 hover:text-braid-green font-medium">Portfólio</a></li>
+                <li><a href="#depoimentos" class="text-stone-700 hover:text-braid-green font-medium">Depoimentos</a></li>
+                <li><a href="#faq" class="text-stone-700 hover:text-braid-green font-medium">FAQ</a></li>
+                <li><a href="#agendamento" class="text-stone-700 hover:text-braid-green font-medium">Agendamento</a></li>
+            </ul>
+            <!-- Botão Mobile -->
+            <button id="menu-mobile-btn" class="md:hidden text-braid-green text-3xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="menu-mobile" class="fixed top-0 left-0 w-full h-full bg-white bg-opacity-95 z-50 flex flex-col items-center justify-center space-y-8 text-xl font-medium text-braid-green hidden">
+            <button id="close-menu-mobile" class="absolute top-6 right-6 text-3xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <a href="#hero" class="hover:text-braid-green-dark" onclick="document.getElementById('menu-mobile').classList.add('hidden')">Início</a>
+            <a href="#sobre" class="hover:text-braid-green-dark" onclick="document.getElementById('menu-mobile').classList.add('hidden')">Sobre</a>
+            <a href="#servicos" class="hover:text-braid-green-dark" onclick="document.getElementById('menu-mobile').classList.add('hidden')">Serviços</a>
+            <a href="#espaco" class="hover:text-braid-green-dark" onclick="document.getElementById('menu-mobile').classList.add('hidden')">Espaço</a>
+            <a href="#portfolio" class="hover:text-braid-green-dark" onclick="document.getElementById('menu-mobile').classList.add('hidden')">Portfólio</a>
+            <a href="#depoimentos" class="hover:text-braid-green-dark" onclick="document.getElementById('menu-mobile').classList.add('hidden')">Depoimentos</a>
+            <a href="#faq" class="hover:text-braid-green-dark" onclick="document.getElementById('menu-mobile').classList.add('hidden')">FAQ</a>
+            <a href="#agendamento" class="hover:text-braid-green-dark" onclick="document.getElementById('menu-mobile').classList.add('hidden')">Agendamento</a>
+        </div>
+    </nav>
 
     <!-- 1. Seção Principal (Hero) -->
+
+    
     <header class="relative h-[600px] md:h-[700px] flex items-center justify-center text-center overflow-hidden">
         <!-- Imagem de fundo com sobreposição escura -->
-        <div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image: url('http://127.0.0.1:5500/images%20/imagem_cab.png');">
+        <div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image: url('imagem_cab.png');">
             <div class="absolute inset-0 bg-stone-900 opacity-60"></div>
         </div>
         <!-- Conteúdo da seção principal -->
-        <div class="relative z-10 px-4 max-w-4xl text-white" style="margin-top: 400px;">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4">
+        <div class="relative z-10 px-4 max-w-4xl text-white flex flex-col items-center justify-center mt-32 md:mt-[400px] text-center">
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4 text-center">
                 Tranças Incríveis para Sua Próxima Transformação
             </h1>
-            <p class="text-lg sm:text-xl font-light mb-8">
+            <p class="text-base sm:text-xl font-light mb-8 text-center">
                 Especialista em box braids, nagô e twists. Use apenas produtos de alta qualidade para um resultado deslumbrante.
             </p>
-            <a href="#agendamento" class="inline-block bg-braid-green hover:bg-braid-green-dark text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+            <a href="#agendamento" class="inline-block bg-braid-green hover:bg-braid-green-dark text-white font-semibold py-3 px-6 sm:px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
                 Agende Seu Horário
             </a>
         </div>
@@ -57,7 +101,7 @@
         <div class="container mx-auto max-w-5xl flex flex-col md:flex-row items-center gap-12">
             <!-- Imagem da trancista -->
             <div class="md:w-1/3 flex-shrink-0">
-                <img src="http://127.0.0.1:5500/images%20/trancista.jpg" alt="Foto da trancista" class="w-full h-auto object-cover rounded-lg shadow-xl">
+                <img src="trancista.jpg" alt="Foto da trancista" class="w-full h-auto object-cover rounded-lg shadow-xl">
             </div>
             <!-- Texto sobre a trancista -->
             <div class="md:w-2/3 text-center md:text-left">
@@ -111,18 +155,38 @@
             <p class="text-lg text-stone-700 mb-12">Veja a qualidade e o carinho em cada detalhe.</p>
             <!-- Grid de imagens do portfólio -->
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('http://127.0.0.1:5500/images%20/box-braids.jpg');"></div>
-                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('http://127.0.0.1:5500/images%20/trancas-nago.avif');"></div>
-                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('http://127.0.0.1:5500/images%20/furlani.jpg');"></div>
-                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('http://127.0.0.1:5500/images%20/tranca_1.jpg');"></div>
-                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('http://127.0.0.1:5500/images%20/tranca_2.jpg');"></div>
-                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('http://127.0.0.1:5500/images%20/tranca_3.jpg');"></div>
-                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('http://127.0.0.1:5500/images%20/tranca_4.jpg');"></div>
-                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('http://127.0.0.1:5500/images%20/tranca_5.jpg');"></div>
+                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('box-braids.jpg');"></div>
+                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('trancas-nago.avif');"></div>
+                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('furlani.jpg');"></div>
+                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('tranca_1.jpg');"></div>
+                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('tranca_2.jpg');"></div>
+                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('tranca_3.jpg');"></div>
+                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('tranca_4.jpg');"></div>
+                <div class="w-full h-48 sm:h-64 bg-cover bg-center rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105" style="background-image: url('tranca_5.jpg');"></div>
             </div>
         </div>
     </section>
-
+     
+     <!-- Área do Espaço - Carrossel de Fotos -->
+    <section id="espaco" class="py-16 md:py-24 px-4 bg-white">
+        <div class="container mx-auto max-w-5xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-braid-green">Conheça Nosso Espaço</h2>
+            <p class="text-lg text-stone-700 mb-8">Veja como é o ambiente onde você será atendida!</p>
+            <!-- Carrossel de fotos do espaço -->
+            <div class="relative w-full max-w-3xl mx-auto">
+                <div class="overflow-hidden rounded-lg shadow-xl">
+                    <div class="flex transition-transform duration-500" id="carrossel-espaco">
+                        <img src="espaco_1.jpg" alt="Foto do Espaço 1" class="w-full h-80 object-cover flex-shrink-0">
+                        <img src="espaco_2.png" alt="Foto do Espaço 2" class="w-full h-80 object-cover flex-shrink-0">
+                        <img src="espaco_3.jpg" alt="Foto do Espaço 3" class="w-full h-80 object-cover flex-shrink-0">
+                    </div>
+                </div>
+                <!-- Botões de navegação -->
+                <button id="prev-espaco" class="absolute left-0 top-1/2 -translate-y-1/2 bg-braid-green text-white px-3 py-2 rounded-full shadow-lg">&#8592;</button>
+                <button id="next-espaco" class="absolute right-0 top-1/2 -translate-y-1/2 bg-braid-green text-white px-3 py-2 rounded-full shadow-lg">&#8594;</button>
+            </div>
+        </div>
+    </section>
     <!-- 5. Depoimentos de Clientes -->
     <section id="depoimentos" class="py-16 md:py-24 px-4">
         <div class="container mx-auto max-w-4xl text-center">
@@ -134,7 +198,7 @@
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <p class="text-stone-700 italic mb-4">"Um trabalho impecável! O cuidado e a atenção aos detalhes são impressionantes. Adorei o resultado e já quero agendar novamente."</p>
                     <div class="flex items-center justify-center">
-                        <img src="http://127.0.0.1:5500/images%20/cliente-1.jpg" alt="Foto do Cliente 1" class="w-12 h-12 rounded-full mr-4">
+                        <img src="cliente-1.jpg" alt="Foto do Cliente 1" class="w-12 h-12 rounded-full mr-4">
                         <span class="font-semibold text-stone-900">Ana S.</span>
                     </div>
                 </div>
@@ -142,7 +206,7 @@
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <p class="text-stone-700 italic mb-4">"Profissionalismo e talento definem o trabalho. Minhas tranças ficaram perfeitas e recebi elogios de todos. Recomendo de olhos fechados!"</p>
                     <div class="flex items-center justify-center">
-                        <img src="http://127.0.0.1:5500/images%20/cliente-2.jpg" alt="Foto do Cliente 2" class="w-12 h-12 rounded-full mr-4">
+                        <img src="cliente-2.jpg" alt="Foto do Cliente 2" class="w-12 h-12 rounded-full mr-4">
                         <span class="font-semibold text-stone-900">Maria L.</span>
                     </div>
                 </div>
